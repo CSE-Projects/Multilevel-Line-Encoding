@@ -4,4 +4,4 @@
 
 ## Implementation of the following line coding schemes:
 * 2B1Q
-* 8B6T
+* 8B6T  

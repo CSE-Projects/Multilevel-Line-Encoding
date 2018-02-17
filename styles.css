@@ -1,0 +1,60 @@
+/* main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+/*=============== HEADER =====================*/
+/* header */
+#header {
+    text-align: center;
+    font-size: 48px;
+}
+
+
+/*============== TABS =======================*/
+
+/* Style the tab */
+.tabs {
+    overflow: hidden;
+    background-color: #ffffff;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+/* tab elements */
+.tablinks {
+    padding: 20px 60px 20px 60px;
+    font-size: 18px;
+}
+
+/* buttons inside the tab */
+button {
+    background-color: #ccc;
+    color: white;
+    border-radius: 2px;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+button:hover {
+    background-color: #34b4f9;
+}
+
+/* Create an active/current tablink class */
+button.active {
+    background-color: #3498db;
+}

@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Multilevel Line Encoding</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Main container -->
+    <div class="container">
+
+        <h1 id="header">
+            Multilevel Line Encoding
+        </h1>
+
+        <!-- tabs for encoding schemes -->
+        <div class="tabs">
+            <button class="tablinks active" onclick="selectEncoding(event, '2B1Q')">2B1Q</button>
+            <button class="tablinks" onclick="selectEncoding(event, '8BTQ')">8B6T</button>
+        </div>
+
+    </div>
+
+
+    <!-- JavaScripts -->
+    <script rel="script" src="javascripts/main.js"></script>
+    <script rel="script" src="javascripts/encoding_2b1q.js"></script>
+    <script rel="script" src="javascripts/encoding_8b6t.js"></script>
 
 </body>
 </html>
