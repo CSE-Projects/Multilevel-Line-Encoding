@@ -1,3 +1,8 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    flex-direction: column;
+}
+
 /* main container */
 .container {
     display: flex;
@@ -12,6 +17,27 @@
 #header {
     text-align: center;
     font-size: 48px;
+}
+
+
+/*============== DATA INPUT =======================*/
+#input-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+#bitstream-input {
+    margin: 40px 20px 40px 20px;
+    height: 50px;
+    text-align: left;
+    font-size: 18px;
+}
+
+#plot-button {
+    width: 200px;
 }
 
 

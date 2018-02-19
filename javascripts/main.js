@@ -27,3 +27,32 @@ function selectEncoding(eventItem, type) {
     }
 
 }
+
+// get the bit stream from the input field and check validity
+function getBitStream(event, bitStream) {
+
+    // check for no input
+    if (bitStream.length === 0) {
+        alert("Please Enter the Bit Stream");
+        return;
+    }
+
+    // check bits are binary
+    for (var i = 0; i < bitStream.length; ++i) {
+        if (bitStream[i] != 0 && bitStream[i] != 1) {
+            alert("Please Enter a valid Bit Stream of only 0 and 1");
+            return;
+        }
+    }
+
+    console.log(bitStream);
+}
+
+// check for bit input
+document.querySelector('#bitstream-input').addEventListener('keypress', function (){
+
+    // focus plot button
+    document.getElementById('plot-button').style.backgroundColor = '#3498db';
+});
+
+

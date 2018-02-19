@@ -6,6 +6,9 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body>
 
@@ -15,6 +18,11 @@
         <h1 id="header">
             Multilevel Line Encoding
         </h1>
+
+        <div id="input-data">
+            <input id="bitstream-input" type="text" name="bitstream" placeholder="Enter Bit Stream" size="35">
+            <button id="plot-button" onclick="getBitStream(event, document.getElementById('bitstream-input').value)">PLOT</button>
+        </div>
 
         <!-- tabs for encoding schemes -->
         <div class="tabs">
