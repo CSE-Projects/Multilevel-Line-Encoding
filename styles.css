@@ -58,3 +58,10 @@ button:hover {
 button.active {
     background-color: #3498db;
 }
+
+
+/*================= TAB AREA ================*/
+#graph-area {
+    margin: 30px 60px 30px 60px;
+    width: 100%;
+}
