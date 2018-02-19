@@ -8,5 +8,5 @@
 
 ### Using HTML, CSS, JavaScript     
 
-### Exteranl Libraries
+### External Libraries
 * [plotly.js](https://github.com/plotly/plotly.js/)
