@@ -18,3 +18,34 @@ x1.push(5);
 
 
 var previouslevel=1; // Initial positive level
+
+for(i=0;i<5;++i){
+  if(previouslevel==1){
+    if(input[i]=="00"){
+      y1.push(1);y1.push(1);
+    }
+    if(input[i]=="01"){
+      y1.push(3);y1.push(3);
+    }
+    if(input[i]=="10"){
+      y1.push(-1);y1.push(-1);previouslevel=-1;
+    }
+    if(input[i]=="11"){
+      y1.push(-3);y1.push(-3);previouslevel=-1;
+    }
+  }
+  else{
+    if(input[i]=="00"){
+      y1.push(-1);y1.push(-1);
+    }
+    if(input[i]=="01"){
+      y1.push(-3);y1.push(-3);
+    }
+    if(input[i]=="10"){
+      y1.push(1);y1.push(1);previouslevel=1;
+    }
+    if(input[i]=="11"){
+      y1.push(3);y1.push(3);previouslevel=1;
+    }
+  }
+}
