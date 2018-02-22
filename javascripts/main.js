@@ -1,12 +1,17 @@
-// load 2B1Q graph as default after window has loaded
-window.onload = function (ev) {
-    // use to data computed in encoding_2b1q.js and provide it to the Ploty library
-    Plotly.newPlot('graph-area', data_2b1q);
-};
+
+// hold value of selected tab
+var selected_encoding = '2B1Q';
+
+// input for 8B6T
+var input_8b6t = [];
+
+// input for 2B1Q
+var input_2b1q = [];
+
+
 
 // Select encoding scheme
 function selectEncoding(eventItem, type) {
-
 
     var i, tablinks;
 
@@ -19,17 +24,17 @@ function selectEncoding(eventItem, type) {
     // highlight the clicked button
     eventItem.currentTarget.className += " active";
 
-    if (type === '2B1Q') {
-        Plotly.newPlot('graph-area', data_2b1q);
-    }
-    else {
-        Plotly.newPlot('graph-area', data_8b6t);
-    }
+    // set the selected tab
+    selected_encoding = type;
 
+    // clear input
+    document.getElementById('bitstream-input').value= '';
 }
 
+
+
 // get the bit stream from the input field and check validity
-function getBitStream(event, bitStream) {
+function getBitStreamAndPlot(event, bitStream) {
 
     // check for no input
     if (bitStream.length === 0) {
@@ -45,8 +50,39 @@ function getBitStream(event, bitStream) {
         }
     }
 
+    // check validity for 2B1Q (multiples of 2)
+    if ((bitStream.length % 2) !== 0  && selected_encoding === '2B1Q') {
+        alert("Please Enter the Bit Stream for 2B1Q in multiples of 2");
+        return;
+    }
+
+    // check validity for 8B6T (multiples of 8)
+    if ((bitStream.length % 8) !== 0  && selected_encoding === '8B6T') {
+        alert("Please Enter the Bit Stream for 8B6T in multiples of 8");
+        return;
+    }
+
     console.log(bitStream);
+
+    parseBitStream(bitStream);
+    if (selected_encoding === '2B1Q') {
+        encoding_2b1q(input_2b1q);
+        console.log("IN");
+        Plotly.newPlot('graph-area', data_2b1q);
+    }
+    else {
+        encoding_8b6t(input_8b6t);
+        Plotly.newPlot('graph-area', data_8b6t);
+    }
+
+    // clear input
+    document.getElementById('bitstream-input').value= '';
+    input_8b6t = [];
+    input_2b1q = [];
+
 }
+
+
 
 // check for bit input
 document.querySelector('#bitstream-input').addEventListener('keypress', function (){
@@ -56,3 +92,24 @@ document.querySelector('#bitstream-input').addEventListener('keypress', function
 });
 
 
+
+// converts input bit stream to the inputs for the logic to plot the graph
+function parseBitStream(bitStream) {
+
+    // split bit stream into groups of 2
+    for (var i = 0; i <= (bitStream.length - 2); i += 2) {
+        input_2b1q.push(bitStream.substr(i, 2));
+    }
+
+    console.log(input_2b1q);
+
+    // convert bit stream from base 2 to base 16
+    var bitStreamHex = parseInt(bitStream, 2).toString(16).toUpperCase();
+
+    // split bit stream into groups of 2
+    for (i = 0; i <= (bitStreamHex.length - 2); i += 2) {
+        input_8b6t.push(bitStreamHex.substr(i, 2));
+    }
+
+    console.log(input_8b6t);
+}

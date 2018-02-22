@@ -19,22 +19,25 @@
             Multilevel Line Encoding
         </h1>
 
-        <div id="input-data">
-            <input id="bitstream-input" type="text" name="bitstream" placeholder="Enter Bit Stream" size="35">
-            <button id="plot-button" onclick="getBitStream(event, document.getElementById('bitstream-input').value)">PLOT</button>
-        </div>
-
         <!-- tabs for encoding schemes -->
         <div class="tabs">
             <button class="tablinks active" onclick="selectEncoding(event, '2B1Q')">2B1Q</button>
-            <button class="tablinks" onclick="selectEncoding(event, '8BTQ')">8B6T</button>
+            <button class="tablinks" onclick="selectEncoding(event, '8B6T')">8B6T</button>
         </div>
 
-        <!-- tab content area containing th graph -->
-        <div id="graph-area">
+        <div>
+
+            <div id="input-data">
+                <input id="bitstream-input" type="text" name="bitstream" placeholder="Enter Bit Stream" size="35">
+                <button id="plot-button" onclick="getBitStreamAndPlot(event, document.getElementById('bitstream-input').value)">PLOT</button>
+            </div>
+
+            <!-- tab content area containing th graph -->
+            <div id="graph-area">
+
+            </div>
 
         </div>
-
 
     </div>
 
