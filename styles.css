@@ -20,25 +20,7 @@ body {
 }
 
 
-/*============== DATA INPUT =======================*/
-#input-data {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-}
 
-#bitstream-input {
-    margin: 40px 20px 40px 20px;
-    height: 50px;
-    text-align: left;
-    font-size: 18px;
-}
-
-#plot-button {
-    width: 200px;
-}
 
 
 /*============== TABS =======================*/
@@ -87,7 +69,58 @@ button.active {
 
 
 /*================= TAB AREA ================*/
+
+#tab-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/*==== DATA INPUT =====*/
+#input-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+#bitstream-input {
+    margin: 40px 20px 40px 20px;
+    height: 50px;
+    text-align: left;
+    font-size: 18px;
+}
+
+#plot-button {
+    width: 200px;
+}
+
+/*==== GRAPH =====*/
 #graph-area {
     margin: 30px 60px 30px 60px;
-    width: 100%;
+    width: 1200px;
+    padding: 0;
+    border: 1px solid black;
+}
+.plot-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+}
+
+#explanation-area {
+
+}
+
+#explanation {
+    font-size: 20px;
+    text-align: left;
 }

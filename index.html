@@ -25,8 +25,9 @@
             <button class="tablinks" onclick="selectEncoding(event, '8B6T')">8B6T</button>
         </div>
 
-        <div>
-
+        <!-- Tab area -->
+        <div id="tab-area">
+            <!-- Take input -->
             <div id="input-data">
                 <input id="bitstream-input" type="text" name="bitstream" placeholder="Enter Bit Stream" size="35">
                 <button id="plot-button" onclick="getBitStreamAndPlot(event, document.getElementById('bitstream-input').value)">PLOT</button>
@@ -35,6 +36,12 @@
             <!-- tab content area containing th graph -->
             <div id="graph-area">
 
+            </div>
+
+            <!-- Explanation for the encoding -->
+            <div id="explanation-area">
+                <p id="explanation"> </p>
+                <img id="table" src="">
             </div>
 
         </div>
