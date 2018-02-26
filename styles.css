@@ -76,7 +76,8 @@ button.active {
     align-items: center;
     justify-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
+    margin: 0 10px 0 10px;
 }
 
 /*==== DATA INPUT =====*/
@@ -117,7 +118,7 @@ button.active {
 }
 
 #explanation-area {
-
+    margin: 10px 60px 10px 60px;
 }
 
 #explanation {
