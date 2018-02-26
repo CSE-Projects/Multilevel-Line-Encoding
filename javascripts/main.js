@@ -1,3 +1,7 @@
+// load initial explanation
+window.onload = function () {
+    addExplanation();
+};
 
 // hold value of selected tab
 var selected_encoding = '2B1Q';
@@ -8,6 +12,24 @@ var input_8b6t = [];
 // input for 2B1Q
 var input_2b1q = [];
 
+var layout = {
+    xaxis: {
+        title: 'Time',
+        titlefont: {
+            family: 'Courier New, monospace',
+            size: 18,
+            color: '#7f7f7f'
+        }
+    },
+    yaxis: {
+        title: 'Voltage',
+        titlefont: {
+            family: 'Courier New, monospace',
+            size: 18,
+            color: '#7f7f7f'
+        }
+    }
+};
 
 
 // Select encoding scheme
@@ -29,7 +51,6 @@ function selectEncoding(eventItem, type) {
 
     // clear input
     document.getElementById('bitstream-input').value= '';
-
 
     addExplanation();
 
@@ -77,11 +98,11 @@ function getBitStreamAndPlot(event, bitStream) {
     if (selected_encoding === '2B1Q') {
         encoding_2b1q(input_2b1q);
         console.log("IN");
-        Plotly.newPlot('graph-area', data_2b1q);
+        Plotly.newPlot('graph-area', data_2b1q, layout);
     }
     else {
         encoding_8b6t(input_8b6t);
-        Plotly.newPlot('graph-area', data_8b6t);
+        Plotly.newPlot('graph-area', data_8b6t, layout);
     }
 
     // clear input
@@ -125,7 +146,7 @@ function parseBitStream(bitStream) {
 
 function addExplanation() {
 
-    var exp_2b1q = "In this type of encoding mBnL m =2, n =1, and L = 4 (quaternary) </br>"
+    var exp_2b1q = "Here inital previous level is taken as positive<br><br> In this type of encoding mBnL m =2, n =1, and L = 4 (quaternary) </br>"
         + "Uses data patterns of size 2 and encodes the 2-bit patterns as one signal element belonging to a four-level signal using the mapping table sown below </br>"
         + "<br> 1. The incoming data stream is split into 2-bit patterns.<br> 2. This 2-bit pattern is then converted into a 1 signal-bit pattern but using 4 voltage levels -3V, -1V, 1V and 3V looking at the previous signal level also<br><br>"
     + "The mapping table used is shown below </br>";

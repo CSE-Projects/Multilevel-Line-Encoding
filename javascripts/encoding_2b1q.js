@@ -7,7 +7,6 @@ function encoding_2b1q(input_2b1q) {
     var i, j, k;
 
 
-    // Replace 5 by no of input
     x1.push(0);
 
 
@@ -58,6 +57,7 @@ function encoding_2b1q(input_2b1q) {
         y: y1,
         type: 'scatter'
     };
+
 
     data_2b1q = [trace1];
 
