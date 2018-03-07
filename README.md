@@ -18,8 +18,11 @@
     * `script.cpp` : Contains logic for converting the mapping table in `source.txt` to JavaScript logic for the file `encoding_8b6t.js`             
 * `images`
     * `table_2b1q.jpg` : Image of encoding table for 2B1Q
-    * `table_8b6t.jpg` : Image of encoding table for 8B6T
+    * `table_8b6t.png` : Image of encoding table for 8B6T
           
 
 ### External Libraries
 * [plotly.js](https://github.com/plotly/plotly.js/)
+
+
+#### A working demo of the application can be found here: [Multilevel-Line-Encoding](http://multilevel-line-encoding-2b1q-8b6t.s3-website-us-west-2.amazonaws.com/)
