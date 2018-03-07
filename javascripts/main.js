@@ -135,12 +135,12 @@ function parseBitStream(bitStream) {
 
     // convert bit stream from base 2 to base 16
     var bitStreamHex = parseInt(bitStream, 2).toString(16).toUpperCase();
-
+	if(bitStreamHex.length==1) 
+		bitStreamHex="0"+bitStreamHex;
     // split bit stream into groups of 2
     for (i = 0; i <= (bitStreamHex.length - 2); i += 2) {
         input_8b6t.push(bitStreamHex.substr(i, 2));
     }
-
     console.log(input_8b6t);
 }
 

@@ -25,7 +25,8 @@ function encoding_8b6t(input_8b6t) {
         if(p[i]=="00" && last==0){
             var a1=-1,a2=1,a3=0,a4=0,a5=-1,a6=1;if((a1+a2+a3+a4+a5+a6)==1){last=1;}
             y1.push(a1);y1.push(a1);y1.push(a2);y1.push(a2);y1.push(a3);y1.push(a3);y1.push(a4);y1.push(a4);y1.push(a5);y1.push(a5);y1.push(a6);y1.push(a6);
-        }
+			console.log(y1);        
+	}
             else if(p[i]=="00"){
             var a1=-1,a2=1,a3=0,a4=0,a5=-1,a6=1,r1=a1+a2+a3+a4+a5+a6;
             if(last==0){
