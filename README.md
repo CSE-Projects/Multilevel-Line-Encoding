@@ -13,7 +13,7 @@
     * `encoding_8b6t.js` : Contains logic for implementation of 8B6T
     * `main.js` : Contains logic to handle interactions with UI elements in `index.html`
 * `styles.css` : Contains code for styling the elements in `index.html`
-* `C++ script`
+* `C++_script`
     * `source.txt` : Contains the mapping table for 8B6T as a txt file
     * `script.cpp` : Contains logic for converting the mapping table in `source.txt` to JavaScript logic for the file `encoding_8b6t.js`             
 * `images`
