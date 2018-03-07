@@ -131,17 +131,21 @@ function parseBitStream(bitStream) {
         input_2b1q.push(bitStream.substr(i, 2));
     }
 
-    console.log(input_2b1q);
+    var bitStreamHex = '';
 
     // convert bit stream from base 2 to base 16
-    var bitStreamHex = parseInt(bitStream, 2).toString(16).toUpperCase();
-	if(bitStreamHex.length==1) 
-		bitStreamHex="0"+bitStreamHex;
-    // split bit stream into groups of 2
+    for (i = 0; i <= (bitStream.length - 4); i += 4) {
+        bitStreamHex += parseInt(bitStream.substr(i, 4), 2).toString(16).toUpperCase();
+    }
+
+    // console.log(bitStreamHex);
+
+    // split bit stream hex into groups of 2
     for (i = 0; i <= (bitStreamHex.length - 2); i += 2) {
         input_8b6t.push(bitStreamHex.substr(i, 2));
     }
-    console.log(input_8b6t);
+
+    // console.log(input_8b6t);
 }
 
 function addExplanation() {
