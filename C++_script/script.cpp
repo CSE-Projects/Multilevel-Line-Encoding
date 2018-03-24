@@ -5,6 +5,8 @@
 using namespace std;
 typedef long long ll;
 string aa;
+
+// converting integer to hexadecimal
 void dd(int n)
 {   
     aa="";
@@ -49,6 +51,8 @@ void dd(int n)
         aa.pb(y);
     }
 }
+
+// assigning '+' to +1 and '-' to -1
 int foo(char x){
     if(x=='+')return 1;
     if(x=='-')return -1;
@@ -57,6 +61,8 @@ int foo(char x){
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL); 
+
+	// reading the file and storing it in Map (data structure in STL)
     FILE * input;
     input=fopen("source.txt","r");
     char s1[10000],s2[10000];
@@ -68,10 +74,14 @@ int main(){
            a[s1]=s2; 
     }
     fclose(input);
+
+	// making an iterator for the Map
     map <string,string> ::iterator it;
     for(int i=0;i<256;++i){
         dd(i);
         string pp=a[aa];
+
+		// JS script will be printed in the terminal
         cout<<"\telse if(p[i]==\""<<aa<<"\"){\n";
         cout<<"\t\tvar a1=<<"<<foo(pp[0])<<",a2="<<foo(pp[1])<<",a3="<<foo(pp[2])<<",a4="<<foo(pp[3])<<",a5="<<foo(pp[4])<<",a6="<<foo(pp[5])<<",r1=a1+a2+a3+a4+a5+a6;\n";
         cout<<"\t\tif(last==0){\n";

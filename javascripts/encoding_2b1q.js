@@ -9,7 +9,7 @@ function encoding_2b1q(input_2b1q) {
 
     x1.push(0);
 
-
+	// Setting up the x coordinates
     for(i = 1; i < input_2b1q.length; ++i){
         x1.push(i);
         x1.push(i);
@@ -21,7 +21,10 @@ function encoding_2b1q(input_2b1q) {
 
     var previouslevel=1; // Initial positive level
 
-    for(i = 0; i < input_2b1q.length; ++i){
+    
+	// Depending on the input setting up y coordinates
+	// According to the table values are pushed into y1[] and previouslevel is switched
+	for(i = 0; i < input_2b1q.length; ++i){
         if(previouslevel === 1){
             if(input_2b1q[i] == "00"){
                 y1.push(1);y1.push(1);
@@ -52,7 +55,8 @@ function encoding_2b1q(input_2b1q) {
         }
     }
 
-    var trace1 = {
+	// Plotting the graph    
+	var trace1 = {
         x: x1,
         y: y1,
         type: 'scatter'

@@ -11,7 +11,9 @@ function encoding_8b6t(input_8b6t) {
 
     var i,j,k;
 
-    x1.push(0);
+    
+	// Setting up the x coordinates
+	x1.push(0);
 
     for(i=1;i<(6*p.length);++i){
         x1.push(i);x1.push(i);
@@ -21,7 +23,10 @@ function encoding_8b6t(input_8b6t) {
 
     var last=0; // Initial last is 0
 
-    for(i=0;i<p.length;++i){
+    
+	// Setting up the y coordinates by pushing values according to the table 
+	// According to the table values are pushed into y1[] and last is switched
+	for(i=0;i<p.length;++i){
         if(p[i]=="00" && last==0){
             var a1=-1,a2=1,a3=0,a4=0,a5=-1,a6=1;if((a1+a2+a3+a4+a5+a6)==1){last=1;}
             y1.push(a1);y1.push(a1);y1.push(a2);y1.push(a2);y1.push(a3);y1.push(a3);y1.push(a4);y1.push(a4);y1.push(a5);y1.push(a5);y1.push(a6);y1.push(a6);
@@ -3870,6 +3875,7 @@ function encoding_8b6t(input_8b6t) {
 
     }
 
+	// Plotting the graph
     var trace2 = {
         x: x1,
         y: y1,
