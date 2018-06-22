@@ -25,4 +25,4 @@
 * [plotly.js](https://github.com/plotly/plotly.js/)
 
 
-#### A working demo of the application can be found here: [Multilevel-Line-Encoding](http://multilevel-line-encoding-2b1q-8b6t.s3-website-us-west-2.amazonaws.com/)
+#### A working demo of the application can be found here: [Multilevel-Line-Encoding](https://cse-projects.github.io/Multilevel-Line-Encoding/index.html)
